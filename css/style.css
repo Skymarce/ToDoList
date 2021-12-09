@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    column-gap: 15px;
+}
+
+.card {
+    margin: 15px 15px;
+    padding: 15px  25px;
+    background-color: rgb(228, 228, 228);
+    display: grid;
+    grid-template-columns: 900px 220px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-img {
+    background-color: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+}
+
+.card-img img {
+    width: 25px;
+    cursor: pointer;
+    padding: 0 5px;
+
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-descr {
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.card-date {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.modal-window-btn-add, .modal-window-btn-delete {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.close-modal-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.close-modal, .close-modal-delete, .close-modal-change {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-window-add, .modal-window-delete, .modal-window-change {
+    position: absolute;
+    width: 500px;
+    min-height: 200px;
+    background-color: rgb(0, 0, 0);
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.tasktitle, .tasktitle-change, .tasktitle-delete {
+    margin-top: 10px;
+    width: 280px;
+    height: 35px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 300;
+    outline: none;
+    border: none;
+}
+
+.taskdescr, .taskdescr-change {
+    margin-top: 10px;
+    width: 280px !important;
+    height: 100px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 300;
+    outline: none;
+    border: none;
+}
+
+.modal-window-add input, textarea {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.modal-window-delete input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.modal-window-change input, textarea {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.create-task, .delete-task, .change-task {
+    width: 130px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.deletetaskname-error {
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.active-gray {
+    background-color: rgb(189, 189, 189);
+}
+
+.active-green {
+    background-color: #60D6A7;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-wrapper">
+            <div>
+              <button class="modal-window-btn-add">+</button>
+            </div>
+            <div>
+              <button class="modal-window-btn-delete">-</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-window-add hide">
+        
+        <div class="close-modal-wrapper">
+          <button class="close-modal">X</button>
+        </div>
+        <input class="tasktitle" type="text" placeholder="новая задача">
+        <textarea class="taskdescr" type="text" placeholder="описание"></textarea>
+
+        <button class="create-task" type="button">Создать</button>
+
+    </div>
+
+    <div class="modal-window-delete hide">
+        
+      <div class="close-modal-wrapper">
+        <button class="close-modal-delete">X</button>
+      </div>
+      <input class="tasktitle-delete" type="text" placeholder="название задачи, которую удалить">
+
+      <button class="delete-task" type="button">Удалить</button>
+
+    </div>
+
+    <div class="modal-window-change hide">
+        
+      <div class="close-modal-wrapper">
+        <button class="close-modal-change">X</button>
+      </div>
+      <input class="tasktitle-change" type="text" placeholder="изменить задачу">
+      <textarea class="taskdescr-change" type="text" placeholder="изменить описание"></textarea>
+
+      <button class="change-task" type="button">Изменить</button>
+
+  </div>
+
+    <div class="ok-cards"></div>
+    <div class="wrong-cards"></div>
+    
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

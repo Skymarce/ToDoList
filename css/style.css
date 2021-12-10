@@ -27,7 +27,7 @@ body {
     padding: 15px  25px;
     background-color: rgb(228, 228, 228);
     display: grid;
-    grid-template-columns: 900px 220px;
+    grid-template-columns: 900px 100px;
     justify-content: space-between;
     align-items: center;
 }
@@ -37,14 +37,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
+    width: 100px;
     height: 50px;
 }
 
 .card-img img {
     width: 25px;
     cursor: pointer;
-    padding: 0 5px;
+    padding: 0 6px;
 
 }
 

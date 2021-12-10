@@ -1,10 +1,9 @@
 import {getData} from '../services/getData.js';
 import {deleteTask} from './deleteTask.js';
 import {changeTask} from './changeTask.js';
-import {deleteTaskName} from './deleteTaskName.js';
 
 function showCards() {
-    getData('http://localhost:3000/task').then(data => {renderCards(data), pickOut(), deleteTask(), changeTask()});
+    getData('http://localhost:3000/task').then(data => {renderCards(data), deleteTask(), changeTask()});
 }
 
 function renderCards(data) {
@@ -20,10 +19,7 @@ function renderCards(data) {
                         <div class="card-date">${item.date}</div>
                     </div>
                     <div class="card-img">
-                        <img src="../img/icons/okay.png">
                         <img id="${item.id}" class="delete-btn-change" src="../img/icons/edit.png">
-                        <img src="../img/icons/arrow_up.png">
-                        <img src="../img/icons/arrow_down.png">
                         <img id="${item.id}" class="delete-btn-task" src="../img/icons/delete.png">
                     </div>
                 </div>
@@ -38,10 +34,7 @@ function renderCards(data) {
                         <div class="card-date">${item.date}</div>
                     </div>
                     <div class="card-img">
-                        <img src="../img/icons/okay.png">
                         <img id="${item.id}" class="delete-btn-change" src="../img/icons/edit.png">
-                        <img src="../img/icons/arrow_up.png">
-                        <img src="../img/icons/arrow_down.png">
                         <img id="${item.id}" class="delete-btn-task" src="../img/icons/delete.png">
                     </div>
                 </div>
@@ -49,16 +42,6 @@ function renderCards(data) {
         }
     });
 
-}
-
-function pickOut() {
-    let pick = document.querySelectorAll('.card');
-
-    pick.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active-gray');
-        });
-    });
 }
 
 export {showCards};

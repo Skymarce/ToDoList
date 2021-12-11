@@ -9,6 +9,12 @@
 </head>
 <body>
     <div class="header">
+      
+      <div class="header-search">
+        <input class="seacrh" placeholder="введите название" type="text" value="">
+        <button class="btn-search" >Поиск</button>
+      </div>
+      
         <div class="header-wrapper">
             <div>
               <button class="modal-window-btn-add">+</button>
@@ -17,6 +23,7 @@
               <button class="modal-window-btn-delete">-</button>
             </div>
         </div>
+
     </div>
 
     <div class="modal-window-add hide">
@@ -53,9 +60,10 @@
       <button class="change-task" type="button">Изменить</button>
 
   </div>
-
-    <div class="ok-cards"></div>
+    <div class="search-result"></div>
     <div class="wrong-cards"></div>
+    <hr>
+    <div class="ok-cards"></div>
     
     <script src="js/index.js" type="module"></script>
 </body>

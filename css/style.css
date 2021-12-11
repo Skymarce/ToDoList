@@ -11,9 +11,11 @@ body {
 .header {
     height: 60px;
     background-color: black;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 325px 100px;
     justify-content: center;
+    align-items: center;
+    column-gap: 15px;
 }
 
 .header-wrapper {
@@ -22,12 +24,38 @@ body {
     column-gap: 15px;
 }
 
+.header-search {
+    display: grid;
+    grid-template-columns: 250px 60px;
+    column-gap: 15px;
+}
+
+.seacrh {
+    width: 230px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.btn-search {
+    width: 60px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 .card {
     margin: 15px 15px;
     padding: 15px  25px;
     background-color: rgb(228, 228, 228);
     display: grid;
-    grid-template-columns: 900px 100px;
+    grid-template-columns: 900px 150px;
     justify-content: space-between;
     align-items: center;
 }
@@ -37,7 +65,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 150px;
     height: 50px;
 }
 

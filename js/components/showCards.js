@@ -1,9 +1,10 @@
 import {getData} from '../services/getData.js';
 import {deleteTask} from './deleteTask.js';
 import {changeTask} from './changeTask.js';
+import {doneTask} from './doneTask.js';
 
 function showCards() {
-    getData('http://localhost:3000/task').then(data => {renderCards(data), deleteTask(), changeTask()});
+    getData('http://localhost:3000/task').then(data => {renderCards(data), deleteTask(), changeTask(), doneTask()});
 }
 
 function renderCards(data) {
@@ -19,7 +20,6 @@ function renderCards(data) {
                         <div class="card-date">${item.date}</div>
                     </div>
                     <div class="card-img">
-                        <img id="${item.id}" class="delete-btn-change" src="../img/icons/edit.png">
                         <img id="${item.id}" class="delete-btn-task" src="../img/icons/delete.png">
                     </div>
                 </div>
@@ -34,6 +34,7 @@ function renderCards(data) {
                         <div class="card-date">${item.date}</div>
                     </div>
                     <div class="card-img">
+                        <img id="${item.id}" class="btn-okay-task" src="img/icons/checked.png">
                         <img id="${item.id}" class="delete-btn-change" src="../img/icons/edit.png">
                         <img id="${item.id}" class="delete-btn-task" src="../img/icons/delete.png">
                     </div>

@@ -1,10 +1,9 @@
 import {getData} from '../services/getData.js';
 import {deleteData} from '../services/deleteData.js';
 
-let deleteTask = document.querySelector('.delete-task');
-let taskInput = document.querySelector('.tasktitle-delete').value;
+function deleteTaskName1(data) {
 
-function deleteTaskName(data) {
+    let taskInput = document.querySelector('.tasktitle-delete').value;
 
     let filterCard = data.filter(elem => elem.taskTitle === taskInput);
 
@@ -14,8 +13,10 @@ function deleteTaskName(data) {
 
 }
 
+let deleteTask = document.querySelector('.delete-task');
+
 deleteTask.addEventListener('click', () => {
-    getData('http://localhost:3000/task').then(data => deleteTaskName(data));
+    getData('http://localhost:3000/task').then(data => deleteTaskName1(data));
 });
 
-export {deleteTaskName};
+export {deleteTaskName1};

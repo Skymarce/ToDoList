@@ -2,16 +2,13 @@ import {putData} from "../services/putData.js";
 import {openModal, closeModal} from "../components/modal.js";
 
 function changeTask() {
-
     let editBtn = document.querySelectorAll('.delete-btn-change');
 
     editBtn.forEach(item => {
-        item.addEventListener('click', () => {
-            
-            let input = document.querySelector('.tasktitle-change');
-            let descr = document.querySelector('.taskdescr-change');
-
-            let card = item.parentElement.parentElement;
+        item.addEventListener('click', () => { 
+            let input = document.querySelector('.tasktitle-change'),
+                descr = document.querySelector('.taskdescr-change'),
+                card = item.parentElement.parentElement;
 
             input.value = card.querySelector('.card-title').textContent;
             descr.value = card.querySelector('.card-descr').textContent;
@@ -31,7 +28,6 @@ function changeTask() {
                 };
                 putData(`http://localhost:3000/task/${item.id}`, changeObj);
             });
-
         });
     });
 }

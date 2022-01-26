@@ -1,10 +1,7 @@
 import {putData} from "../services/putData.js";
 
 function doneTask() {
-
-    let btnOkay = document.querySelectorAll('.btn-okay-task');
-
-    btnOkay.forEach(item => {
+    document.querySelectorAll('.btn-okay-task').forEach(item => {
         item.addEventListener('click', () => {
             let obj = {
                 taskTitle: `${item.parentElement.parentElement.querySelector('.card-title').textContent}`,
@@ -16,6 +13,6 @@ function doneTask() {
             putData(`http://localhost:3000/task/${item.id}`, obj);
         });
     });
-}
+};
 
 export {doneTask};

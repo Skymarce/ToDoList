@@ -8,10 +8,8 @@ function showCards() {
 }
 
 function renderCards(data) {
-
     data.forEach(item => {
         if (item.IsFinished === 'true') {
-
             document.querySelector('.ok-cards').innerHTML += `
                 <div class="card">
                     <div class="card-description">
@@ -25,7 +23,6 @@ function renderCards(data) {
                 </div>
             `;
         } else {
-
             document.querySelector('.wrong-cards').innerHTML += `
                 <div class="card">
                     <div class="card-description">
@@ -42,7 +39,6 @@ function renderCards(data) {
             `;
         }
     });
-
-}
+};
 
 export {showCards};
